@@ -20,9 +20,9 @@ static byte * image_pixels;
 static byte * color_pixels;
 static string image;
 
-static auto replace_red = 0xff; 
+static auto replace_red   = 0xff; 
 static auto replace_green = 0x0; 
-static auto replace_blue = 0x0; 
+static auto replace_blue  = 0x0; 
 
 static void floodFill(int x, int y) {
 	const auto r_background = image_pixels[y * pitch + x * 4 + 0]; 
@@ -46,9 +46,9 @@ static void floodFill(int x, int y) {
 		if (p.first - 1 >= 0) {
 			auto x_child = p.first - 1;
 			auto y_child = p.second;
-			auto& red_child = image_pixels[y_child * pitch + x_child * 4 + 0]; 
+			auto& red_child   = image_pixels[y_child * pitch + x_child * 4 + 0]; 
 			auto& green_child = image_pixels[y_child * pitch + x_child * 4 + 1]; 
-			auto& blue_child = image_pixels[y_child * pitch + x_child * 4 + 2]; 
+			auto& blue_child  = image_pixels[y_child * pitch + x_child * 4 + 2]; 
 			if (red_child == r_background && green_child == g_background && blue_child == b_background) {
 				childs.push_back(make_pair(x_child, y_child));
 			}
@@ -58,9 +58,9 @@ static void floodFill(int x, int y) {
 		if (p.second - 1 >= 0) {
 			auto x_child = p.first;
 			auto y_child = p.second - 1;
-			auto& red_child = image_pixels[y_child * pitch + x_child * 4 + 0]; 
+			auto& red_child   = image_pixels[y_child * pitch + x_child * 4 + 0]; 
 			auto& green_child = image_pixels[y_child * pitch + x_child * 4 + 1]; 
-			auto& blue_child = image_pixels[y_child * pitch + x_child * 4 + 2]; 
+			auto& blue_child  = image_pixels[y_child * pitch + x_child * 4 + 2]; 
 			if (red_child == r_background && green_child == g_background && blue_child == b_background) {
 				childs.push_back(make_pair(x_child, y_child));
 			}
@@ -70,9 +70,9 @@ static void floodFill(int x, int y) {
 		if (p.first + 1 < w) {
 			auto x_child = p.first + 1;
 			auto y_child = p.second;
-			auto& red_child = image_pixels[y_child * pitch + x_child * 4 + 0]; 
+			auto& red_child   = image_pixels[y_child * pitch + x_child * 4 + 0]; 
 			auto& green_child = image_pixels[y_child * pitch + x_child * 4 + 1]; 
-			auto& blue_child = image_pixels[y_child * pitch + x_child * 4 + 2]; 
+			auto& blue_child  = image_pixels[y_child * pitch + x_child * 4 + 2]; 
 			if (red_child == r_background && green_child == g_background && blue_child == b_background) {
 				childs.push_back(make_pair(x_child, y_child));
 			}
@@ -82,9 +82,9 @@ static void floodFill(int x, int y) {
 		if (p.second + 1 < h) {
 			auto x_child = p.first;
 			auto y_child = p.second + 1;
-			auto& red_child = image_pixels[y_child * pitch + x_child * 4 + 0]; 
+			auto& red_child   = image_pixels[y_child * pitch + x_child * 4 + 0]; 
 			auto& green_child = image_pixels[y_child * pitch + x_child * 4 + 1]; 
-			auto& blue_child = image_pixels[y_child * pitch + x_child * 4 + 2]; 
+			auto& blue_child  = image_pixels[y_child * pitch + x_child * 4 + 2]; 
 			if (red_child == r_background && green_child == g_background && blue_child == b_background) {
 				childs.push_back(make_pair(x_child, y_child));
 			}
