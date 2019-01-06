@@ -128,7 +128,7 @@ int main(int argc, char * argv[]) {
 	color_rect.w = ww * 2;
 	color_rect.h = h;
 	image_rect.x += color_rect.w + 2;
-	SDL_SetWindowSize(window, image_rect.w + color_rect.w, h);
+	SDL_SetWindowSize(window, image_rect.w + color_rect.w, image_rect.h);
 
 	SDL_Rect rect {.x = 1, .y = 1, .w = 1, .h = 1 }; 
 	byte pixel[4] { 0 };
