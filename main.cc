@@ -126,7 +126,7 @@ int main(int argc, char * argv[]) {
 	SDL_FreeSurface(fsurface);
 
 	color_rect.w = ww * 2;
-	color_rect.h = h;
+	color_rect.h = image_rect.h;
 	image_rect.x += color_rect.w + 2;
 	SDL_SetWindowSize(window, image_rect.w + color_rect.w, image_rect.h);
 
