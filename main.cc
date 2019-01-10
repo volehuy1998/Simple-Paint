@@ -1,9 +1,9 @@
-#include <SDL2/SDL.h>
-#include <SDL2/SDL_image.h>
 #include <vector>
 #include <utility>
 #include <string> 
 #include <iostream>
+#include <SDL2/SDL.h>
+#include <SDL2/SDL_image.h>
 using namespace std;
 using byte = unsigned char;
 
